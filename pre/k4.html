@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<charset="UTF-8">
+	<title>Page title</title>
+</head>
+<body>
+
+<script>
+
+if (!Array.prototype.indexOf) {
+    Array.prototype.indexOf = function(searchValue, index) {
+        var len = this.length >>> 0; // 确保len数值正常，出现异常则取len为0
+        index |= 0; // 同上
+
+        if (index < 0) {
+            index = Math.max(len + index, 0); // 得到实际的index值
+        }
+        
+        if (index >= len) {
+            return -1;
+        }
+            
+        if (searchValue === undefined) {
+            // 如果数组的索引未定义，则其值也为undefined，所以需要检查确认
+            do {
+                if (index in this && this[index] === undefined) {
+                    return index;
+                }
+            } while (++index !== len);
+        } else {
+            do {
+                if (this[index] === searchValue) {
+                    return index;
+                }
+            } while (++index !== len);
+        }
+
+        return -1;
+    };
+}
+    
+var str = [1, null, undefined, 1, 8, 1];
+
+console.log( str.indexOf(7) ); // 
+console.log( str.indexOf(undefined) );
+console.log( str.indexOf(null) );
+console.log( str.indexOf(1, -2) );
+
+</script>
+
+
+</body>
+</html>
+

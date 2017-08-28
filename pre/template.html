@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>20行代码实现JavaScript模板引擎</title>
+</head>
+
+<body>
+    <h2>20行代码实现JavaScript模板引擎</h2>
+    <p>https://johnresig.com/blog/javascript-micro-templating/</p>
+    <p>http://web.jobbole.com/56689/</p>
+    <p>http://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line</p>
+    <div id="wrap">
+        <p>简单测试输出变量<%this.name%></p>
+    </div>
+
+    <div id="wrap2">
+        <h3>循环测试输出变量</h3>
+        <%for(var i=1; i<=5; i++) {%>
+            <p>循环输第<%i%>次。</p>
+        <%}%>
+    </div>
+
+    <script src="template.js"></script>
+</body>
+
+</html>

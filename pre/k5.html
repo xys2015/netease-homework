@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>原生JS实现 AddClass/RemoveClass </title>
+</head>
+<body>
+
+<div id="c1" class="ab cd ee">xx1</div>
+<div id="c2" class="c2 a c">xx2</div>
+<div id="c3">xx3</div>
+<div id="c4" class="cc">xx3</div>
+
+<script>
+
+function hasClass(ele, className) {
+    return ele.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+}
+
+function addClass(ele, className) {
+    if (ele.className === '') {
+        ele.className = className;
+    } else if (!hasClass(ele, className)) {
+        ele.className += " " + className;
+    }
+}
+
+function removeClass(ele, className) {
+    var mt = hasClass(ele, className);
+    var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
+
+    if (mt) {
+        if (mt[1] === " " && mt[2] === " ") {
+            // 如果class在中间，则替换成1个空格
+            ele.className = ele.className.replace(reg, ' ');    
+        } else {
+            // 如果class在两边，或者只有1个class，替换成空字符串
+            ele.className = ele.className.replace(reg, '');
+        }
+    }
+}
+
+var c1 = document.getElementById("c1");
+var c2 = document.getElementById("c2");
+var c3 = document.getElementById("c3");
+var c4 = document.getElementById("c4");
+
+removeClass(c1, "ee");
+
+</script>
+
+</body>
+</html>
+

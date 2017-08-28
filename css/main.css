@@ -1,0 +1,892 @@
+/* 全局设置 */
+html,
+body,
+.g-doc {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font: 10px/10px "Microsoft YaHei";
+    background-color: #f8f8f8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font: normal 10px/10px "Microsoft YaHei";
+}
+
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #999;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.block {
+    display: inline-block;
+}
+
+.clearfix:after {
+    content: '.';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.shadow-mask {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* 兼容IE8透明度 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000,endColorstr=#BF000000);
+    z-index: 100;
+}
+
+/* 页面小于1025时展现的页面 */
+@media (max-width: 1205px) {
+    html,body,.g-doc {
+        box-sizing: border-box;
+        min-width: 1205px;
+    }
+
+    .g-hd {
+        width: 100%;
+    }
+
+    .g-doc .g-hd #atte p {
+        width: 960px;
+        margin: 0 auto;
+    }
+}
+
+/* 登录模块开始 */
+#l-close {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    width: 11px;
+    height: 11px;
+    background: url(../img/sprite.png) no-repeat -353px -1px;
+    cursor: pointer;
+}
+
+#form {
+    box-sizing: border-box;
+    position: fixed;
+    width: 388px;
+    height: 288px;
+    left: 50%;
+    top: 50%;
+    margin-left: -194px;
+    margin-top: -144px;
+    padding-left: 40px;
+    padding-top: 30px;
+    background-color: #fff;
+}
+
+#form h2 {
+    margin-bottom: 22px;
+    font-size: 18px;
+    color: #444;
+}
+
+#userName,
+#password {
+    box-sizing: border-box;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dfdfdf;
+    width: 296px;
+    height: 46px;
+    font-size: 16px;
+    line-height: 46px;
+    color: #ccc;
+    font-family: "Microsoft YaHei";
+    box-shadow: 1px 1px 2px #ccc inset;
+}
+
+#l-btn {
+    width: 295px;
+    height: 48px;
+    border: 0;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    background: url(../img/sprite.png) no-repeat -1px -81px;
+}
+/* 登录模块结束 */
+
+/* 视频弹窗 */
+.g-pop .popvideo {
+    position: fixed;
+    box-sizing: border-box;
+    left: 50%;
+    top: 50%;
+    margin-left: -470px;
+    margin-top: -280px;
+    width: 950px;
+    height: 560px;
+    background-color: #fff;
+}
+
+#v-close {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    width: 10px;
+    height: 10px;
+    background: url(../img/sprite.png) no-repeat -353px -1px;
+    cursor: pointer;
+}
+
+.g-pop .popvideo .v-msg {
+    margin-left: 30px;
+    margin-top: 30px;
+    color: #444;
+    font-family: "Microsoft YaHei";
+    font-size: 18px;
+}
+
+#video {
+    display: block;
+    margin: 30px auto;
+    border: 1px solid #000;
+    width: 800px;
+    height: 450px;
+}
+
+/* 小黄条提示信息 */
+.g-hd #m-atte {
+    width: 100%;
+    height: 36px;
+    background-color: #f3f3f3;
+}
+
+.g-hd #m-atte p {
+    margin: 0 auto;
+    width: 1205px;
+    height: 36px;
+    font-size: 12px;
+    line-height: 36px;
+}
+
+.g-hd #m-atte a {
+    color: #21a557;
+}
+
+#close {
+    display: block;
+    float: right;
+    margin-right: 0px;
+    text-align: right;
+    cursor: pointer;
+}
+
+#c-bg {
+    display: block;
+    float: left;
+    margin: 14px 5px;
+    height: 10px;
+    width: 10px;
+    background: url(../img/sprite.png) no-repeat 0 0;
+}
+
+/* logo和导航模块 */
+.g-hd .m-nav {
+    width: 1205px;
+    height: 90px;
+    margin: 0 auto;
+    position: relatve;
+}
+
+.g-hd .m-nav .logo {
+    float: left;
+    margin-top: 33px;
+    width: 380px;
+    height: 57px;
+    background: url(../img/sprite.png) no-repeat -324px -61px;
+}
+
+.g-hd .m-nav .logo #net-edu {
+    float: left;
+    margin-left: 80px;
+    margin-top: 3px;
+    width: 154px;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.m-nav .logo .follow {
+    width: 200px;
+    margin-left: 265px;
+}
+
+.follow span {
+    display: inline-block;
+}
+
+.follow #f-btn {
+    width: 54px;
+    height: 21px;
+    border-radius: 2px;
+    background-color: #21a557;
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 21px;
+    cursor: pointer;
+}
+
+#f-fed {
+    display: none;
+    float: left;
+    box-sizing: border-box;
+    width: 106px;
+    height: 21px;
+    padding-left: 22px;
+    border: 1px solid #efefef;
+    border-radius: 2px;
+    font-size: 1.2em;
+    line-height: 19px;
+    background: url(../img/sprite.png) #f8f8f8 no-repeat -376px 0px;
+}
+
+#f-fed a:hover {
+    color: #21a557;
+}
+
+#fans {
+    margin-left: 5px;
+    line-height: 20px;
+}
+
+#f-btn:hover {
+    background-color: #2fb556;
+}
+
+.m-nav .mooc {
+    float: right;
+    width: 410px;
+    height: 20px;
+    margin-top: 36px;
+    margin-right: 61px;
+}
+
+.m-nav .mooc .m-link {
+    display: inline-block;
+    width: 117px;
+    font-size: 1.6em;
+    text-align: center;
+    color: #666;
+}
+
+.m-nav .mooc .m-link:hover {
+    color: #46a63e;
+}
+
+.m-nav .mooc .sec {
+    display: inline-block;
+    width: 20px;
+    height: 19px;
+    margin-top: -3px;
+    margin-left: 25px;
+    background: url(../img/sprite.png) no-repeat 0 -13px;
+}
+
+.m-nav .mooc .sec:hover {
+    background: url('../img/sprite.png') no-repeat 0 -40px;
+}
+
+.g-main {
+    width: 100%;
+}
+/* 轮播图 */
+.m-wrap {
+    width: 100%;
+    min-width: 1205px;
+    position: relative;
+    overflow: hidden;
+    height: 460px;
+}
+
+.m-wrap .n-bnr {
+    width: 100%;
+}
+
+.m-wrap .m-bnr a {
+    display: block;
+    margin: 0 auto;
+    width: 1652px;
+    height: 460px;
+    z-index: 0;
+}
+
+.m-wrap .m-bnr a.active {
+    display: block;
+}
+
+.m-wrap .m-bnr .b-pic1 {
+    display: none;
+    background: url('../img/banner1.jpg') no-repeat;
+}
+
+.m-wrap .m-bnr .b-pic2 {
+    display: none;
+    opacity: 0;
+    filter: Alpha(opacity=0);
+    background: url('../img/banner2.jpg') no-repeat;
+}
+
+.m-wrap .m-bnr .b-pic3 {
+    display: none;
+    opacity: 0;
+    filter: Alpha(opacity=0);
+    background: url('../img/banner3.jpg') no-repeat;
+}
+
+.m-wrap .pointer {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    margin-left: -26px;
+    width: 64px;
+    height: 10px;
+    z-index: 10;
+}
+
+.m-wrap .pointer i {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.m-wrap .pointer i.active {
+    background-color: #333;
+}
+/* 信息介绍 */
+.g-main .m-info {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 1205px;
+    height: 240px;
+}
+/* 慕课信息 */
+.g-main .m-info .p-moc {
+    overflow: hidden;
+    width: 1290px;
+}
+/* 慕课单元模块 */
+.g-main .m-info .i-mooc {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-right: 80px;
+    margin-top: 60px;
+    width: 345px;
+    height: 180px;
+    color: #666;
+}
+
+.g-main .m-info .i-mooc span {
+    display: block;
+    float: left;
+    margin-top: 5px;
+    width: 100px;
+    height: 80px;
+}
+
+.g-main .m-info .moc-1 span {
+    background: url('../img/sprite.png')  no-repeat -38px 0;
+}
+
+.g-main .m-info .moc-2 span {
+    background: url('../img/sprite.png')  no-repeat -130px 0;
+}
+
+.g-main .m-info .moc-3 span {
+    background: url('../img/sprite.png')  no-repeat -220px 0;
+}
+/* 单元头部 */
+.g-main .m-info .i-mooc dt {
+    padding-left: 110px;
+    font-size: 2.2em;
+    font-weight: normal;
+    line-height: 24px;
+    color: #333;
+}
+/* 单元主体 */
+.g-main .m-info .i-mooc dd {
+    padding-left: 110px;
+    margin-top: 20px;
+    font-size: 1.4em;
+    line-height: 24px;
+}
+
+.g-main .m-info .i-mooc dd a {
+    color: #39a030;
+}
+
+.g-main .m-info .i-mooc dd a:hover {
+    text-decoration: underline;
+}
+
+.g-main .m-info .more {
+    margin-left: -2px;
+}
+
+.g-main .m-work {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.g-main .m-work img {
+    width: 20%;
+}
+
+/* 课程内容部分开始 */
+.content-wrap {
+	width: 100%;
+	background-color: #f8f8f8;
+	padding: 1px 0; /*避免边距合并*/
+}
+
+.content {
+	width: 1205px;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+
+.content .con-left {
+	width: 960px;
+	float: left;
+}
+
+.content .con-left .cl-title-wrap {
+	width: 400px;
+	height: 50px;
+	margin-bottom: 30px;
+}
+
+.content .con-left .cl-pd, .content .con-left .cl-pl {
+	width: 200px;
+	height: 50px;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+	line-height: 50px;
+	background-color: #39a030;
+	float: left;
+}
+
+.content .con-left .cl-pd {
+	box-shadow: -2px 2px 2px #d4d3d3;
+}
+
+.content .con-left .cl-pl {
+	color: #666;
+	background-color: #fff;
+	box-shadow: 2px 2px 2px #d4d3d3;
+}
+
+.content .course-list {
+    position: relative;
+    display: inline-block;
+    width: 225px;
+}
+
+.content .con-left .course-1 {
+	width: 225px;
+	height: 228px;
+	box-shadow: 0px 1px 2px #bbb;
+	background-color: #fff;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.content .con-left .course-1:nth-child(4n+4) {
+	margin-right: 0;
+}
+
+.content .con-left .course-1:nth-child(n+5) {
+	margin-top: 21px;
+}
+
+.content .con-left .course-1 .c-photo {
+    width: 223px;
+    height: 124px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.content .con-left .course-1 h3 {
+    height: 14px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #333;
+	cursor: pointer;
+	text-overflow: ellipsis;
+    overflow: hidden;  
+    white-space: nowrap;
+	margin-bottom: 10px;
+	margin-left: 5px;
+}
+
+.content .con-left .course-1 .c-provider {
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #999;
+	cursor: pointer;
+	margin-bottom: 11px;
+	margin-left: 5px;
+}
+
+.content .con-left .learner-count {
+    box-sizing: border-box;
+    width: 55px;
+    height: 18px;
+    padding-left: 14px;
+    margin-left: 5px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-style: normal;
+    line-height: 16px;
+    text-align: center;
+    background: url(../img/sprite.png) no-repeat -383px -116px;
+}
+
+.content .con-left .course-1 .c-price {
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #ff3f00;
+	margin-left: 5px;
+}
+
+.course-hover {
+    display: none;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    box-sizing: border-box;
+    width: 480px;
+    height: auto;
+    padding-top: 20px;
+	box-shadow: 0px 1px 2px #bbb;
+	background-color: #fff;
+	z-index: 999;
+}
+
+.course-hover .course-top {
+    height: 150px;
+}
+
+.course-hover img {
+    display: block;
+    float: left;
+    margin-left: 20px;
+    width: 223px;
+    height: 123px;
+}
+
+.course-hover .p-title {
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 200px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #333;
+    font-style: normal;
+}
+
+.course-hover em {
+    float: left;
+    display: block;
+    box-sizing: border-box;
+    width: 55px;
+    height: 18px;
+    padding-left: 14px;
+    margin-left: 20px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-style: normal;
+    line-height: 16px;
+    text-align: center;
+    background: url(../img/sprite.png) no-repeat -383px -116px;
+}
+
+.course-hover span {
+    float: left;
+    width: 42%;
+    height: 10px;
+    display: block;
+    margin-left: 20px;
+    margin-top: 8px;
+    color: #999;
+}
+
+.course-hover .description {
+    box-sizing: border-box;
+    padding: 22px;
+    width: 480px;
+    height: auto;
+    font-size: 14px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    color: #999;
+}
+
+
+.content .con-left .cl-page {
+	width: 302px;
+	height: 20px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #666;
+	float: right;
+	margin-top: 30px;
+	margin-bottom: 120px;
+	text-align: center;
+}
+
+
+.content .con-left .cl-page .p-num li {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	float: left;
+	margin-left: 10px;
+    line-height: 20px;
+    list-style: none;
+}
+
+.content .con-left .cl-page .p-num li:hover {
+	background-color: #9dd8b1;
+	color: #fff;
+}
+
+.content .con-left .p-last, .content .con-left .p-next {
+	width: 30px;
+	height: 20px;
+	color: #fff;
+	font-size: 20px;
+	background-color: #9dd8b1;
+	cursor: pointer;
+	float: left;
+	line-height: 20px;
+}
+
+.content .con-right {
+	width: 225px;
+	background-color: #f8f8f8;
+	float: right;
+	margin-top: 3px;
+}
+
+.content .con-right .orga-intro {
+	height: 230px;
+    box-shadow: 0px 1px 2px #bbb;
+    background-color: #fff;
+}
+
+.content .con-right .orga-intro .oi-title {
+	height: 55px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #333;
+	line-height: 55px;
+	box-shadow: 0px 1px 2px #bbb;
+	text-indent: 20px;
+}
+
+.content .con-right .orga-intro .oi-video {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #666;
+	height: 173px;
+	padding: 1px 0;  /*避免边距合并*/
+	text-align: center;
+}
+
+.content .con-right .orga-intro img {
+	cursor: pointer;
+}
+
+.content .con-right .orga-intro .oi-video p {
+	margin-top: 20px;
+}
+
+.content .con-right .orga-intro .oi-video img {
+	margin-top: 9px;
+}
+
+.content .con-right .hot-rank {
+	box-shadow: 0px 1px 2px #bbb;
+    margin-top: 21px;
+    background-color: #fff;
+}
+.content .con-right .hot-rank .hr-title {
+	height: 55px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #333;
+	box-shadow: 0px 1px 2px #bbb;
+	line-height: 55px;
+	text-indent: 20px;
+}
+.content .con-right .hot-rank .hrc-course-list {
+	padding-bottom: 28px;
+}
+.content .con-right .hot-rank .hrc {
+	width: 183px;
+	height: 50px;
+	margin: 0 auto;
+	margin-top: 28px;
+}
+
+.content .con-right .hot-rank .hrc-photo {
+    width: 50px;
+    height: 50px;
+	display: block;
+	float: left;
+}
+
+.content .con-right .hot-rank .hrc-msg {
+	width: 120px;
+	height: 50px;
+	float: right;
+}
+
+.content .con-right .hot-rank .hrc-title {
+    height: 14px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #333;
+	text-overflow: ellipsis;
+    overflow: hidden;  
+    white-space: nowrap;
+}
+
+.content .con-right .hot-rank .hrc-count {
+    float: left;
+    margin-top: 12px;
+    margin-left: 12px;
+    width: 60px;
+    height: 12px;
+    color: #999;
+    line-height: 12px;
+    text-indent: 1.3em;
+    background: url(../img/sprite.png) no-repeat -384px -118px;
+}
+
+/* 课程内容部分结束 */
+
+/* 底部信息栏 */
+.g-doc .g-bottom {
+    width: 100%;
+    height: 262px;
+    background-color: #2c3339;
+}
+
+.g-doc .m-bottom {
+    margin: 0 auto;
+    width: 1205px;
+    color: #a2a4a5;
+}
+
+.g-doc .g-bottom .m-bottom .cp-right {
+    float: left;
+    margin-top: 80px;
+    width: 410px;
+    height: 100px;
+}
+
+.g-bottom .m-bottom .cp-right h4 {
+    font-size: 2.8em;
+    color: #39a030;
+}
+
+.m-bottom .cp-right h4>span {
+    font-weight: normal;
+}
+
+.m-bottom .cp-right p {
+    margin-top: 15px;
+    line-height: 20px;
+    font-size: 1.25em;
+}
+
+.g-bottom .m-bottom dl {
+    display: inline-block;
+    float: left;
+    margin-top: 75px;
+    width: 115px;
+    height: 100px;
+    line-height: 25px;
+    vertical-align: center;
+}
+
+.m-bottom dt {
+    line-height: 35px;
+    font-size: 1.25em;
+}
+
+.m-bottom dd {
+    font-size: 1.46em;
+}
+
+.f-links {
+    margin-left: 150px;
+    margin-right: 95px;
+}
+
+.more {
+    margin-left: 15px;
+}
+
+.m-bottom dd a:hover {
+    text-decoration: underline;
+}
+
+.ab-us a span {
+    display: inline-block;
+    margin-left: 3px;
+    margin-bottom: -3px;
+    width: 22px;
+    height: 21px;
+    background: url('../img/sprite.png') no-repeat 0 -58px;
+}

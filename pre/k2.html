@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>getElementsByClassName 兼容</title>
+</head>
+<body>
+    
+<p><pre>(^|\s)names(\s|$)</pre></p>
+<div class="ab cd">ab cd</div>
+<div class="a c">a c</div>
+<script>
+
+function getElementsByClassName(names, rootElement) {
+    if (!rootElement) {
+        rootElement = document;
+    }
+    
+    if (rootElement.getElementsByClassName) {
+        // console.log("走的是原生方法");
+        return rootElement.getElementsByClassName(names);
+    }
+    
+    // console.log("走的是兼容方案");
+    var classElements = [];
+    var allElements = rootElement.getElementsByTagName("*");
+    pattern = new RegExp("(^|\\s)" + names + "(\\s|$)");
+
+    for (var i = 0, j = 0; i < allElements.length; i++) {
+        if (pattern.test(allElements[i].className)) {
+            classElements[j] = allElements[i];
+            j++;
+        }
+    }
+
+    return classElements;
+}
+
+var mt = getElementsByClassName("ab");
+console.log(mt[0].className); // "ab cd"
+
+var mt2 = getElementsByClassName("a");
+console.log(mt2[0].className); // "a c"
+
+var mt3 = getElementsByClassName("ac");
+console.log(mt3); // []
+
+</script>
+</body>
+</html>

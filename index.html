@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>网易教育产品部</title>
+    <meta name="author" content="Asheng">
+    <meta name="version" content="1.0">
+    <meta name="keywords" content="网易教育产品部、网易公开课、云课堂、中国大学MOOC">
+    <meta name="description" content="网易教育部是网易公司研发的一款大型在线教育平台服务，该平台面向学习者提供海量免费、优质课程，创新的个性化学习体验，自由开放的交流互动环境。">
+    <link rel="stylesheet" href="css/main.css" />
+    <script type="text/javascript" src="js/compatible.js"></script>
+    <script type="text/javascript" src="js/md5.min.js"></script>
+</head>
+
+<body>
+    <div class="g-doc">
+
+        <!-- 登陆弹窗开始 -->
+        <div id="m-form" class="shadow-mask">
+            <form action="http://study.163.com/webDev/login.htm" method="get" name="login" id="form">
+                <div id="l-close"></div>
+                <h2>登录网易云课堂</h2>
+                <p>
+                    <label for="userName">
+						<input type="text" name="userName" id="userName" placeholder="账号">
+					</label>
+                </p>
+                <p>
+                    <label for="password">
+						<input type="password" name="password" id="password" placeholder="密码">
+					</label>
+                </p>
+                <button type="button" id="l-btn">登 录</button>
+            </form>
+        </div>
+        <!-- 登陆弹窗介绍结束 -->
+
+        <!-- 视频弹窗开始 -->
+        <div class="g-pop shadow-mask">
+            <div class="popvideo">
+                <div id="v-close"></div>
+                <div class="v-msg">请观看下面视频</div>
+                <video id="video" src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" type="video" controls></video>
+            </div>
+        </div>
+        <!-- 视频弹窗结束 -->
+
+        <!-- 头部开始（一直到工作环境部分） -->
+        <div class="g-hd">
+            <!-- 顶栏小黄条提示开始 -->
+            <div id="m-atte">
+                <p>
+                    <span>网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！</span>
+                    <a href="#">立即查看&gt;</a>
+                    <a id="close"><span id="c-bg"></span>不再提醒</a>
+                </p>
+            </div>
+            <!-- 顶栏小黄条提示结束 -->
+
+            <!-- logo和导航模块开始 -->
+            <div class="m-nav clearfix">
+                <div class="logo">
+                    <h1 id="net-edu">网易教育产品部</h1>
+                    <div class="follow">
+                        <span id="f-btn" class="block">+ 关注</span>
+                        <span id="f-fed">已关注 | <a href="" id="f-cancel">取消</a></span>
+                        <span id="fans">粉丝 45</span>
+                    </div>
+                </div>
+                <div class="mooc">
+                    <a class="m-link" href="http://open.163.com/" target="_blank">网易公开课</a>
+                    <a class="m-link" href="http://study.163.com/" target="_blank">云课堂</a>
+                    <a class="m-link" href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a>
+                    <a href="#" class="sec"></a>
+                </div>
+            </div>
+            <!-- logo和导航模块结束 -->
+
+            <div class="g-main">
+                <!-- 轮播图模块开始 -->
+                <div class="m-wrap">
+                    <div class="m-bnr">
+                        <a class="b-pic1 active" href="http://open.163.com/" target="_blank"></a>
+                        <a class="b-pic2" href="http://study.163.com/" target="_blank"></a>
+                        <a class="b-pic3" href="http://www.icourse163.org/" target="_blank"></a>
+                    </div>
+                    <p class="pointer">
+                        <i class="active"></i>
+                        <i></i>
+                        <i></i>
+                    </p>
+                </div>
+                <!-- 轮播图模块结束 -->
+
+                <!-- 产品展示模块开始 -->
+                <div class="m-info">
+                    <div class="p-moc">
+                        <dl class="i-mooc moc-1">
+                            <span></span>
+                            <dt>网易公开课</dt>
+                            <dd class="con">
+                                <p>推出国内外名校公开课，涉及广泛的学科，名师认真讲解深度剖析，网易视频公开课频道搭建起强有力的网络视频教学平台</p>
+                            </dd>
+                            <dd class="more"><a href="http://open.163.com/">了解更多 &gt;</a></dd>
+                        </dl>
+                        <dl class="i-mooc moc-2">
+                            <span></span>
+                            <dt>云课堂</dt>
+                            <dd class="con">
+                                <p>网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程，创新的个性化学习体验，自由开放的交流互动环境</p>
+                            </dd>
+                            <dd class="more"><a href="http://study.163.com/">了解更多 &gt;</a></dd>
+                        </dl>
+                        <dl class="i-mooc moc-3">
+                            <span> </span>
+                            <dt>中国大学MOOC</dt>
+                            <dd class="con">
+                                <p>是爱课程携手云课堂打造的在线学习平台，每一个有提升愿望的人，都可以在这里学习中国最好的大学课程，学完还能获得认证证书。</p>
+                            </dd>
+                            <dd class="more"><a href="http://www.icourse163.org/">了解更多 &gt;</a></dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- 产品展示模块开始 -->
+
+                <!-- 工作环境模块开始 -->
+                <div class="m-work"><img src="./img/work1.jpg"><img src="./img/work2.jpg"><img src="./img/work3.jpg"><img src="./img/work4.jpg"><img src="./img/work5.jpg"></div>
+                <!-- 工作环境模块结束 -->
+
+            </div>
+        </div>
+        <!-- 头部结束 -->
+
+        <!-- 课程内容部分开始 -->
+        <div class="content-wrap">
+            <div class="content">
+                <div class="con-left clearfix">
+                    <div class="cl-title-wrap">
+                        <h2 class="cl-pd">产品设计</h2>
+                        <h2 class="cl-pl clearfix">编程语言</h2>
+                    </div>
+                    
+                    
+                    <div id="course-wrap">
+                    <%for (var i=0; i<20; i++) {%>
+                    <div class="course-list clearfix">
+                        <div class="course-1">
+                            <img class="c-photo" src="<%this.msg[i].middlePhotoUrl%>">
+                            <h3><%this.msg[i].name%></h3>
+                            <div class="c-provider"><%this.msg[i].provider%></div>
+                            <div class="learner-count"><%this.msg[i].learnerCount%></div>
+                            <div class="c-price"><%this.msg[i].price ? this.msg[i].price : "免费"%></div>
+                        </div>
+
+                        <div class="course-hover">
+                            <div class="course-top">
+                                <img src="<%this.msg[i].middlePhotoUrl%>" alt="<%this.msg[i].name%>">
+                                <i class="p-title"><%this.msg[i].name%></i>
+                                <em><%this.msg[i].learnerCount%></em>
+                                <span>发布者：<%this.msg[i].learnerCount%></span>
+                                <span>分类：<%this.category%></span>
+                            </div>
+                            <p class="description"><%this.msg[i].description%></p>
+                        </div>
+                    </div>
+                    <%}%>
+                    </div>
+
+                
+
+                    <div class="cl-page">
+                        <div class="p-last">&lt;</div>
+                        <ul class="p-num">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                        </ul>
+                        <div class="p-next">&gt;</div>
+                    </div>
+                </div>
+                <div class="con-right clearfix">
+                    <div class="orga-intro">
+                        <h2 class="oi-title">机构介绍</h2>
+                        <div class="oi-video">
+                            <p>观看下面的视频来了解吧：</p>
+                            <img id="get-video-img" src="./img/video.jpg">
+                        </div>
+                    </div>
+                    <div class="hot-rank">
+                        <h2 class="hr-title">最热排行</h2>
+                        <div id="hot-wrap">
+                        <%for (var i=0; i<10; i++) {%>
+                            <div class="hrc-course-list">
+                            <div class="hrc">
+                                <img class="hrc-photo" src="<%this.msg[i].smallPhotoUrl%>"></img>
+                                <div class="hrc-msg">
+                                    <h3 class="hrc-title"><%this.msg[i].name%></h3>
+                                    <div class="hrc-count">
+                                        <div class="hrc-count-img"></div>
+                                        <div class="hrc-count-text"><%this.msg[i].learnerCount%></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        <%}%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 课程内容部分结束 -->
+
+        <!-- 底部模块开始 -->
+        <div class="g-bottom">
+            <div class="m-bottom">
+                <div class="cp-right">
+                    <h4>EDU <span>| 网易教育产品部</span></h4>
+                    <p>&copy;2014 icourse163.org 浙ICP备08114786号-1</p>
+                    <p>icourses.cn 京ICP备12020869号-2 京公网安备110102000459-2</p>
+                </div>
+                <dl class="f-links">
+                    <dt>友情链接:</dt>
+                    <dd><a href="http://open.163.com">网易公开课</a></dd>
+                    <dd><a href="http://study.163.com/">网易云课堂</a></dd>
+                    <dd><a href="http://www.icourse163.org/">中国大学MOOC</a></dd>
+                </dl>
+                <dl class="ab-us">
+                    <dt>我们:</dt>
+                    <dd><a href="">关于</a></dd>
+                    <dd><a href="">联系</a></dd>
+                    <dd><a href="">关注<span></span></a></dd>
+                </dl>
+                <dl class="more">
+                    <dt>更多:</dt>
+                    <dd><a href="">常见问题</a></dd>
+                    <dd><a href="">意见反馈</a></dd>
+                </dl>
+            </div>
+        </div>
+        <!-- 底部模块结束 -->
+    </div>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/polyfill.js"></script>
+    <script type="text/javascript" src="js/main2.js"></script>
+</body>
+
+</html>

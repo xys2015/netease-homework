@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<p>兼容getElementsByClassName()</p>
+<div id="div1" class="a b c aass"></div>
+<script>
+var test = document.getElementById("div1");
+console.log(test.className);
+
+// (^|\s)searchClass(\s|$)
+/(^|\s)a(\s|$)/.test("abc");
+</script>
+</body>
+</html>
